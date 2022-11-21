@@ -1,38 +1,19 @@
+import React from 'react';
 import CartWidgets from '../CartWidgets/CartWidgets';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-} from 'reactstrap';
+import '../../App.css';
 
-function NavBar(args) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
+const NavBar = () => {
   return (
     <div>
-      <Navbar {...args}>
-        <NavbarBrand href="/">Librería Constelaciones</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="me-auto" navbar>
-            <NavItem>
-              <NavLink href="#">Libros</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#">Búsqueda</NavLink>
-              <CartWidgets />
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
+      <nav>
+        Librería Constelaciones
+      <ul class="App-header">
+        <li>Home</li>
+        <li>Libros</li>
+        <li>Búsqueda</li>
+      </ul>
+      <CartWidgets />
+      </nav>
     </div>
   );
 }
