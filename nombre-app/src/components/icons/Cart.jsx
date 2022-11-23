@@ -3,8 +3,8 @@ import React from 'react'
 
 const Cart = () => {
     return (
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" space="preserve">
 <g>
 	<path style="fill:#BDC3C7;" d="M58,40.5H8v-26h50V40.5z M10,38.5h46v-22H10V38.5z"/>
 	<path style="fill:#BDC3C7;" d="M9,47.5c-0.553,0-1-0.447-1-1v-7c0-0.553,0.447-1,1-1s1,0.447,1,1v7C10,47.053,9.553,47.5,9,47.5z"
