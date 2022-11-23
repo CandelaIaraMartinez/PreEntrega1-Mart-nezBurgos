@@ -1,8 +1,11 @@
 import React from 'react'
+import Alert from 'react-bootstrap/Alert';
 
-const ItemListContainer = (peep) => {
+const ItemListContainer = (props) => {
   return (
-    <div>Bienvenido {peep.name}</div>
+    <Alert key="success" variant="success">
+        Bienvenido {props.name}
+    </Alert>
   )
 }
 

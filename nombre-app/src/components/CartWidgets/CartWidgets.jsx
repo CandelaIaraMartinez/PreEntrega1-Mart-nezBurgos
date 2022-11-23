@@ -4,7 +4,7 @@ import Cart from '../icons/Cart';
 const CartWidgets = () => {
   return (
     <div>
-        <Cart />
+        <Cart/>
     </div>
   )
 }
