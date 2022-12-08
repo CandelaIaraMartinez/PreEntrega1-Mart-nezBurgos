@@ -1,24 +1,30 @@
 import React from 'react';
-import CartWidgets from '../CartWidgets/CartWidgets';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import {AiOutlineShoppingCart} from "react-icons/ai";
 
-function NavBar() {
+const NavBar = ({menus, categorias}) =>{
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+    <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Libreria Constelaciones</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#">Libros populares</Nav.Link>
-            <Nav.Link href="#">Reseñas</Nav.Link>
-          </Nav>
-        </Container>
-          <CartWidgets />
+          <NavBar.Brand>Cinefilos</NavBar.Brand>
+    {
+      menus.map((menu)=>{
+      return (
+        <Nav className="me-auto">
+      <Nav.Link href= {menu.href}>{menu.name}</Nav.Link>
+      </Nav>
+      )
+    })}
+    </Container>
+          {
+          categorias.map((categoria) =>{
+            return <Nav.Link to={`/category/${categoria.id}`}>
+            {categoria.name}</Nav.Link>
+          })
+          }
       </Navbar>
-      <br />
     </>
   );
 }
